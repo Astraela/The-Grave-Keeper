@@ -1,0 +1,12 @@
+﻿title: Green
+tags:
+---
+    Green: Do you have some bread?
+    <<if not visited("Bluey.GetBread")>>
+        [[You have no bread|Green.noBread]]
+    <<else>>
+        [[Give the boy bread|Green.GiveBread]]
+        [[Dont give the boy bread|Green.DontGiveBread]]
+    <<endif>>
+    <<call uninteractable("Green")>>
+===

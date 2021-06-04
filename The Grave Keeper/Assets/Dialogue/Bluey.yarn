@@ -7,6 +7,7 @@ tags:
     [[AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA|Bluey.AAAAAAAAAA]]
     [[Mood|Bluey.Mood]]
     [[You good?|Bluey.yougood]]
+    [[take the bread|Bluey.GetBread]]
 <<else>>
     Bluey: shut the up.
 <<endif>>
@@ -34,6 +35,8 @@ You: Mood
 Bluey: yep...
 You: :|
 Bluey: :|
+<<call hide("Bluey")>>
+<<call show("Green")>>
 ===
 
 title: Bluey.yougood
@@ -45,4 +48,13 @@ You: You sure?
 Bluey: yep :)
 <<wait 1>>
 Bluey: :(
+===
+
+title: Bluey.GetBread
+tags:
+---
+you take le bread
+<<call hide("Bluey")>>
+<<call show("Green")>>
+
 ===

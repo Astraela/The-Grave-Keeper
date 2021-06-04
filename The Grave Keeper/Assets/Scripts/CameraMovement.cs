@@ -21,7 +21,7 @@ public class CameraMovement : MonoBehaviour
     }
     
     public void setStatic(Vector3 goal){
-        staticGoal = goal + offset;
+        staticGoal = goal;// + offset;
         switchState(state.Static);
     }
 

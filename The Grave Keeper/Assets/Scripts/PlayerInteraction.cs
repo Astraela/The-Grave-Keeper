@@ -14,6 +14,9 @@ public class PlayerInteraction : MonoBehaviour
             Interact();
         }
         GetClosest();
+        if(currentNpc != null && currentNpc.autoInteract && Vector3.Distance(currentNpc.transform.position,transform.position) <= currentNpc.interactRange){
+            Interact();
+        }
     }
 
     public void DialogueEnd(){
@@ -34,7 +37,7 @@ public class PlayerInteraction : MonoBehaviour
         NPC closestNpc = null;
         float dis = 1000000;
         foreach(NPC npc in npcs){
-            if(npc.interactable == true){
+            if(npc.interactable && npc.show){
                 float distance = Vector3.Distance(this.transform.position,npc.transform.position);
                 if(distance <= interactionRange && distance < dis){
                     dis = Vector3.Distance(this.transform.position,npc.transform.position);
