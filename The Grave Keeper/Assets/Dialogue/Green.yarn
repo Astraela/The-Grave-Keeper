@@ -10,3 +10,16 @@ tags:
     <<endif>>
     <<call uninteractable("Green")>>
 ===
+
+title: Green.DontGiveBread
+tags:
+---
+    *dies*
+
+===
+title: Green.noBread
+tags:
+---
+    *dies*
+
+===
