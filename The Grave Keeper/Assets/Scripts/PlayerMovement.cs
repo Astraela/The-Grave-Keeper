@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public bool canMove = true;
     Rigidbody2D rb;
-    // Start is called before the first frame update
+    
     public float speed = 10;
     void Start()
     {
@@ -20,7 +20,8 @@ public class PlayerMovement : MonoBehaviour
         float movement = Input.GetAxisRaw("Horizontal");
         movement = movement * speed;
         rb.velocity = new Vector2(movement,0);
-
+        if(movement != 0) GetComponent<SpriteRenderer>().flipX = movement > 0;
+            GetComponent<Animator>().SetBool("Walking",movement != 0);
         
     }
 }
