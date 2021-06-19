@@ -824,8 +824,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1803261640}
-          m_TargetAssemblyTypeName: TitleScreen, Assembly-CSharp
+        - m_Target: {fileID: 1803261641}
+          m_TargetAssemblyTypeName: PointerHover, Assembly-CSharp
           m_MethodName: OnHover
           m_Mode: 2
           m_Arguments:
@@ -840,8 +840,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1803261640}
-          m_TargetAssemblyTypeName: TitleScreen, Assembly-CSharp
+        - m_Target: {fileID: 1803261641}
+          m_TargetAssemblyTypeName: PointerHover, Assembly-CSharp
           m_MethodName: OnExit
           m_Mode: 1
           m_Arguments:
@@ -1117,8 +1117,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1803261640}
-          m_TargetAssemblyTypeName: TitleScreen, Assembly-CSharp
+        - m_Target: {fileID: 1803261641}
+          m_TargetAssemblyTypeName: PointerHover, Assembly-CSharp
           m_MethodName: OnHover
           m_Mode: 2
           m_Arguments:
@@ -1133,8 +1133,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1803261640}
-          m_TargetAssemblyTypeName: TitleScreen, Assembly-CSharp
+        - m_Target: {fileID: 1803261641}
+          m_TargetAssemblyTypeName: PointerHover, Assembly-CSharp
           m_MethodName: OnExit
           m_Mode: 1
           m_Arguments:
@@ -1155,6 +1155,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1803261639}
   - component: {fileID: 1803261640}
+  - component: {fileID: 1803261641}
   m_Layer: 0
   m_Name: TitleScreenManager
   m_TagString: Untagged
@@ -1188,9 +1189,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 955c87e4583b0ac4680d3b18027a540f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  picker: {fileID: 623883605}
   SceneToLoad: 1
   skull: {fileID: 779163273}
+--- !u!114 &1803261641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803261638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc5c06fa98748804586424fd0e89859a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  picker: {fileID: 623883605}
 --- !u!1 &1985018193
 GameObject:
   m_ObjectHideFlags: 0

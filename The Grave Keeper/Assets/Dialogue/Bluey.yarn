@@ -4,7 +4,7 @@ tags:
 <<if not visited("Bluey")>>
     You: You often walking around with dead pregnant women?
     Bluey: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-    [[AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA|Bluey.AAAAAAAAAA]]
+    [[Scream|Bluey.AAAAAAAAAA]]
     [[Mood|Bluey.Mood]]
     [[You good?|Bluey.yougood]]
     [[take the bread|Bluey.GetBread]]

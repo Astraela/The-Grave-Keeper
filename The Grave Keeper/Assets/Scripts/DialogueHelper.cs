@@ -12,6 +12,9 @@ public class DialogueHelper : MonoBehaviour
     PlayerInteraction playerInteraction;
     private HashSet<string> _visitedNodes = new HashSet<string>();
     public RectTransform dialogueText;
+
+    public GameObject OptionsHeader;
+    public GameObject OptionsFooter;
     void Start()
     {
         dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
@@ -64,9 +67,11 @@ public class DialogueHelper : MonoBehaviour
         playerInteraction.DialogueEnd();
     }
     public void OptionsShow(){
-        dialogueText.offsetMax = new Vector2(-553.79f,dialogueText.offsetMax.y);
+        OptionsFooter.SetActive(true);
+        OptionsHeader.SetActive(true);
     }
     public void OptionsHide(){
-        dialogueText.offsetMax = new Vector2(-2.129882f,dialogueText.offsetMax.y);
+        OptionsFooter.SetActive(false);
+        OptionsHeader.SetActive(false);
     }
 }
