@@ -101,4 +101,9 @@ public class DialogueHelper : MonoBehaviour
         OptionsFooter.SetActive(false);
         OptionsHeader.SetActive(false);
     }
+
+    public void Reset(){
+        Npcs = new Dictionary<string, NPC>();
+        _visitedNodes = new HashSet<string>();
+    }
 }
