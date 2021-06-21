@@ -162,7 +162,7 @@ MonoBehaviour:
   - {x: -7.3732896, y: 2.362214, z: 0}
   m_ShapePathHash: -1105019312
   m_Mesh: {fileID: 0}
-  m_InstanceId: 78842
+  m_InstanceId: 88764
 --- !u!1 &1335244053
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,7 +252,7 @@ MonoBehaviour:
   - {x: -2.119233, y: 1.8640051, z: 0}
   m_ShapePathHash: 556676450
   m_Mesh: {fileID: 0}
-  m_InstanceId: 78848
+  m_InstanceId: 88770
 --- !u!1 &1615790071
 GameObject:
   m_ObjectHideFlags: 0
@@ -981,6 +981,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6965979696585989656}
+  - component: {fileID: 5525061082698029115}
   m_Layer: 7
   m_Name: HorseAndKar
   m_TagString: Untagged
@@ -1006,6 +1007,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5525061082698029115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8706935064222744975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f47511c1bf54d4a42b847d0e09730e85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallPosition: {fileID: 7284621728952667406}
+  woman: {fileID: 6790610971765830058, guid: f9e63a0b1cc8c6d43a362a0923edfcf9, type: 3}
 --- !u!1 &9152602719959353078
 GameObject:
   m_ObjectHideFlags: 0
