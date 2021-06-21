@@ -11,7 +11,6 @@ public class PlayerInteraction : MonoBehaviour
     NPC currentNpc = null;
     DialogueRunner dialogueRunner;
     void Start(){
-        dialogueRunner = FindObjectOfType<DialogueRunner>();
     }
 
     void Update(){
@@ -22,7 +21,7 @@ public class PlayerInteraction : MonoBehaviour
         }else{
             Circle.SetActive(false);
         }
-        if(dialogueRunner.IsDialogueRunning) {
+        if(FindObjectOfType<DialogueRunner>().IsDialogueRunning) {
             Circle.SetActive(false);
             return;
         };
@@ -40,6 +39,7 @@ public class PlayerInteraction : MonoBehaviour
     }
 
     void Interact(){
+        dialogueRunner = FindObjectOfType<DialogueRunner>();
             Circle.SetActive(false);
         GetComponent<PlayerMovement>().canMove = false;
         Camera.main.GetComponent<CameraMovement>().setStatic(currentNpc.transform.position + currentNpc.offset);
