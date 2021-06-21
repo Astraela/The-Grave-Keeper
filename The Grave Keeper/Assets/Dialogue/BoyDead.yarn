@@ -1,0 +1,9 @@
+﻿title: BoyDead
+tags:
+---
+    <<if not visited("BoyDead")>>
+    You: *Sigh*
+    You: That poor boy
+    You pick up the boy
+    <<endif>>
+===

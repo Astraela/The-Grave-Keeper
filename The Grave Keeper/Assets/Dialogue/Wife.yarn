@@ -1,0 +1,31 @@
+﻿title: Wife
+tags:
+---
+    <<if not visited("Wife")>>
+    Wife: Can you promise me to be carefull sweetheart
+    You: I will
+    Wife: Here, take this bread
+    [[leave the bread|Wife.LeaveBread]]
+    [[take the bread|Wife.GetBread]]
+    <<endif>>
+===
+
+title: Wife.LeaveBread
+tags:
+---
+    You: No you keep it
+    You: Now take some rest
+    You: See you soon!
+    Wife: Love you
+    You: Love you too
+===
+
+title: Wife.GetBread
+tags:
+---
+    You: Thanks
+    You: Now take some rest
+    You: See you soon!
+    Wife: Love you
+    You: Love you too
+===

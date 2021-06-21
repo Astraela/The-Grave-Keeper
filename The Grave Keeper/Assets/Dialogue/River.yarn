@@ -1,0 +1,11 @@
+﻿title: River
+tags:
+---
+    <<if not visited("River")>>
+    [[Dump the boy|River.Boy]]
+    <<endif>>
+    <<if not visited("River")>>
+    [[Dump the woman|River.Woman]]
+    <<endif>>
+===
+

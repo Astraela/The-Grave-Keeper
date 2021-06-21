@@ -1,0 +1,19 @@
+﻿title: Boy
+tags:
+---
+    <<if not visited("Boy")>>
+    Boy: Please, sir..
+    Boy: Can you help me?
+    Boy: Some food maybe?
+    [[Ignore him|Boy.Ignore]]
+    [[Give him your bread|Boy.Help]]
+    <<endif>>
+===
+
+title: Boy.Help
+tags:
+---
+    You: Here boy, i have some bread on me.
+    Boy: Thank you sir
+    You: Take care
+===

@@ -1,0 +1,21 @@
+﻿title: Grave
+tags:
+---
+    <<if not visited("Boy")>>
+    there is only one spot for the boy or the woman
+    [[Bury the boy|Grave.Boy]]
+    [[Bury the woman|Grave.Woman]]
+    <<endif>>
+===
+
+title: Grave.Boy
+tags:
+---
+    You bury the boy
+===
+
+title: Grave.Woman
+tags:
+---
+    You bury the woman
+===
