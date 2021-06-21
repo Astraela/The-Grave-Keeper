@@ -32,7 +32,6 @@ public class KarMover : MonoBehaviour
     {
         Vector3 difference = transform.position - horse.position;
         float movement = 0;
-        print(difference.magnitude);
         if(Mathf.Abs(difference.magnitude) > walkRange){
             movement = difference.x < 0 ? 1 : -1;
             movement = movement * speed;

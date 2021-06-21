@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5932726040252675610
 Transform:
   m_ObjectHideFlags: 0
@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 648686643151730712}
   - component: {fileID: 749099759388647502}
   - component: {fileID: 2814780363871138737}
+  - component: {fileID: 477692619}
   m_Layer: 7
   m_Name: kar
   m_TagString: Untagged
@@ -168,7 +169,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 280fdba9a6b7bf04eb0fce2bfae71ce4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -261,6 +262,44 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &477692619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4533220343415433737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -6.123667, y: -2.8620632, z: 0}
+  - {x: -7.6060534, y: -3.0719416, z: 0}
+  - {x: -7.689361, y: -3.5717926, z: 0}
+  - {x: -4.8568735, y: -3.3635216, z: 0}
+  - {x: -4.3153696, y: -4.8630724, z: 0}
+  - {x: -3.398978, y: -6.196006, z: 0}
+  - {x: -2.3159707, y: -7.3206697, z: 0}
+  - {x: -0.98303455, y: -7.4039774, z: 0}
+  - {x: 0.14162426, y: -7.487285, z: 0}
+  - {x: 1.6828275, y: -7.1957054, z: 0}
+  - {x: 3.2240407, y: -6.112698, z: 0}
+  - {x: 4.3070483, y: -4.0716424, z: 0}
+  - {x: 4.2075825, y: -2.9453723, z: 0}
+  - {x: 6.556376, y: -2.9886336, z: 0}
+  - {x: 7.873149, y: 3.6118398, z: 0}
+  - {x: -7.3732896, y: 2.362214, z: 0}
+  m_ShapePathHash: -1105019312
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -26788
 --- !u!1 &5491712875347188091
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,7 +350,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 280fdba9a6b7bf04eb0fce2bfae71ce4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -387,6 +426,7 @@ GameObject:
   - component: {fileID: 1931671949328320947}
   - component: {fileID: 1931671949328320946}
   - component: {fileID: 1931671949328320945}
+  - component: {fileID: 1945231474}
   m_Layer: 7
   m_Name: horse_0
   m_TagString: Untagged
@@ -428,7 +468,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 280fdba9a6b7bf04eb0fce2bfae71ce4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -540,6 +580,62 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1945231474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6337573520567515321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -2.458898, y: -1.6202494, z: 0}
+  - {x: -2.4560788, y: -2.046621, z: 0}
+  - {x: -2.6477675, y: -3.4843018, z: 0}
+  - {x: -1.78516, y: -3.532224, z: 0}
+  - {x: 4.47165, y: -3.5850797, z: 0}
+  - {x: 4.9719334, y: -2.9092286, z: 0}
+  - {x: 4.7083607, y: -2.190389, z: 0}
+  - {x: 4.684397, y: 0.5891255, z: 0}
+  - {x: 4.3010173, y: 1.4038103, z: 0}
+  - {x: 3.4384096, y: 1.739269, z: 0}
+  - {x: 2.914163, y: 1.5004448, z: 0}
+  - {x: 2.288266, y: 1.739269, z: 0}
+  - {x: 1.0183148, y: 1.6434233, z: 0}
+  - {x: 0.6828555, y: 1.739269, z: 0}
+  - {x: -0.10786821, y: 1.739269, z: 0}
+  - {x: -0.10786821, y: 1.5955011, z: 0}
+  - {x: -0.68293995, y: 1.7153072, z: 0}
+  - {x: -1.0902807, y: 1.7871913, z: 0}
+  - {x: -1.1861278, y: 2.1945345, z: 0}
+  - {x: -2.5279627, y: 2.6497996, z: 0}
+  - {x: -3.1509554, y: 2.9373355, z: 0}
+  - {x: -3.5822592, y: 2.7935674, z: 0}
+  - {x: -4.160153, y: 3.057931, z: 0}
+  - {x: -4.396946, y: 2.5779157, z: 0}
+  - {x: -4.2771387, y: 2.12265, z: 0}
+  - {x: -4.588635, y: 1.3079652, z: 0}
+  - {x: -4.372983, y: 0.94854534, z: 0}
+  - {x: -4.1094103, y: 0.8766614, z: 0}
+  - {x: -3.5103753, y: 1.4517331, z: 0}
+  - {x: -2.9592667, y: 1.3558874, z: 0}
+  - {x: -2.4560788, y: 0.78081566, z: 0}
+  - {x: -2.2164638, y: 0.25366676, z: 0}
+  - {x: -2.0487354, y: -0.15367597, z: 0}
+  - {x: -1.857044, y: -0.5130958, z: 0}
+  m_ShapePathHash: -336702095
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -22702
 --- !u!1 &8706935064222744975
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,7 +720,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 280fdba9a6b7bf04eb0fce2bfae71ce4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
