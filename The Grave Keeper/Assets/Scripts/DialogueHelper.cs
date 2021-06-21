@@ -12,7 +12,6 @@ public class DialogueHelper : MonoBehaviour
     PlayerInteraction playerInteraction;
     private HashSet<string> _visitedNodes = new HashSet<string>();
     public RectTransform dialogueText;
-
     public GameObject OptionsHeader;
     public GameObject OptionsFooter;
     void Start()
@@ -54,6 +53,8 @@ public class DialogueHelper : MonoBehaviour
 
     public void NodeComplete(string nodeName) {
         _visitedNodes.Add(nodeName);
+        dialogueText.GetComponent<Text>().text = "";
+        OptionsHeader.transform.parent.gameObject.SetActive(false);
     }
 
 	public void NodeStart(string nodeName) {

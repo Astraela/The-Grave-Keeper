@@ -16,7 +16,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!canMove)return;
+        if(!canMove){
+            GetComponent<Animator>().SetBool("Walking",false);
+            return;
+        }
         float movement = Input.GetAxisRaw("Horizontal");
         movement = movement * speed;
         rb.velocity = new Vector2(movement,0);
