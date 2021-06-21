@@ -16,7 +16,7 @@ public class PlayerInteraction : MonoBehaviour
 
     void Update(){
         GetClosest();
-        if(currentNpc != null && currentNpc.autoInteract == false){
+        if(currentNpc != null && currentNpc.autoInteract == false && currentNpc.interactable == true){
             Circle.SetActive(true);
             Circle.transform.position = currentNpc.transform.position + currentNpc.circleOffset;
         }else{
