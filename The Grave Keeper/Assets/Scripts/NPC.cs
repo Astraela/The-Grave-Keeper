@@ -9,6 +9,7 @@ public class NPC : MonoBehaviour
     public string characterName = "";
 
     public Vector3 offset = Vector3.zero;
+    public Vector3 circleOffset;
 
     public string talkToNode = "";
 

@@ -16,6 +16,8 @@ public class DialogueHelper : MonoBehaviour
     public GameObject OptionsFooter;
     void Start()
     {
+        if(FindObjectsOfType<DialogueHelper>().Length > 1) Destroy(gameObject);
+        DontDestroyOnLoad(gameObject);
         dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
         playerInteraction = FindObjectOfType<PlayerInteraction>();
 
@@ -53,8 +55,6 @@ public class DialogueHelper : MonoBehaviour
 
     public void NodeComplete(string nodeName) {
         _visitedNodes.Add(nodeName);
-        dialogueText.GetComponent<Text>().text = "";
-        OptionsHeader.transform.parent.gameObject.SetActive(false);
     }
 
 	public void NodeStart(string nodeName) {
@@ -66,11 +66,15 @@ public class DialogueHelper : MonoBehaviour
 
     public void DialogueCompleted(){
         playerInteraction.DialogueEnd();
+        dialogueText.GetComponent<Text>().text = "";
+        OptionsHeader.transform.parent.gameObject.SetActive(false);
     }
+
     public void OptionsShow(){
         OptionsFooter.SetActive(true);
         OptionsHeader.SetActive(true);
     }
+
     public void OptionsHide(){
         OptionsFooter.SetActive(false);
         OptionsHeader.SetActive(false);

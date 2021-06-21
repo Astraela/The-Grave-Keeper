@@ -26,8 +26,12 @@ public class HorseMover : MonoBehaviour
         float movement = 0;
         if(Mathf.Abs(difference) > walkRange){
             movement = difference < 0 ? 1 : -1;
-            movement = movement * speed;
+            movement = movement * speed * Mathf.Max(1,(Mathf.Abs(difference)-walkRange));
+            if(Mathf.Abs(difference) < walkRange * 1.2f){
+                movement = Mathf.Clamp(movement, -walkRange,walkRange);
+            }
             GetComponent<SpriteRenderer>().flipX = movement < 0;
+            GetComponentInChildren<ShadowFlip>().Flip(movement < 0);
             stang.transform.localPosition = new Vector3(1.77f * (movement < 0 ? -1 : 1),.61f,0);
         }
             rb.velocity = new Vector2(movement,0);

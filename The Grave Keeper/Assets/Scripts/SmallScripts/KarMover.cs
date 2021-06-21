@@ -32,15 +32,19 @@ public class KarMover : MonoBehaviour
     {
         Vector3 difference = transform.position - horse.position;
         float movement = 0;
-        if(Mathf.Abs(difference.magnitude) > walkRange){
+        if(difference.magnitude > walkRange){
             movement = difference.x < 0 ? 1 : -1;
-            movement = movement * speed;
+            movement = movement * speed * Mathf.Max(1,(difference.magnitude-walkRange)*2f);
+            if(difference.magnitude < walkRange * 1.2f){
+                movement = Mathf.Clamp(movement, -walkRange,walkRange);
+            }
             GetComponent<SpriteRenderer>().flipX = movement < 0;
             wheel.rotation *= Quaternion.Euler(0,0,rotateSpeed * difference.x < 0 ? -1 : 1);
             foreach(KeyValuePair<Transform,Vector3> child in offsets){
                 child.Key.localPosition = new Vector3(child.Value.x * (movement < 0 ? -1 : 1), child.Value.y,0);
                 if(child.Key.GetComponent<SpriteRenderer>()){
                     child.Key.GetComponent<SpriteRenderer>().flipX = movement <0;
+                    GetComponentInChildren<ShadowFlip>().Flip(movement > 0);
                 }
             }
         }

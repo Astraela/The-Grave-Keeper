@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -23,7 +24,10 @@ public class PlayerMovement : MonoBehaviour
         float movement = Input.GetAxisRaw("Horizontal");
         movement = movement * speed;
         rb.velocity = new Vector2(movement,0);
-        if(movement != 0) GetComponent<SpriteRenderer>().flipX = movement > 0;
+        if(movement != 0){
+            GetComponent<SpriteRenderer>().flipX = movement > 0;
+            GetComponentInChildren<ShadowFlip>().Flip(movement < 0);
+        } 
             GetComponent<Animator>().SetBool("Walking",movement != 0);
         
     }

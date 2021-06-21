@@ -1,0 +1,38 @@
+﻿title: Man
+tags:
+---
+    <<if not visited("Man")>>
+    You hear the man that trew down the woman screaming at you
+    Man: This is your fault you devils peasant!
+    Man: You did this to her!
+    [[Are you gonna pay me for that|Man.AskForMoney]]
+    <<endif>>
+===
+
+title: Man.AskForMoney
+tags:
+---
+    Man: You think i have money, get outta here!
+    [[Walk away|Man.WalkAway]]
+    [[Force him more|Man.Force]]
+===
+
+title: Man.WalkAway
+tags:
+---
+    You: ...
+    <<call hide("Man")>>
+    <<call hide("Boy")>>
+    <<call show("BoyDead")>>
+===
+
+title: Man.Force
+tags:
+---
+    You: Give me money or else i will throw her infront of your doorstep
+    Man: Alright Alright, here!
+    He throws the money at you
+    <<call hide("Man")>>
+    <<call hide("Boy")>>
+    <<call show("BoyDead")>>
+===

@@ -18,11 +18,14 @@ public class PlayerInteraction : MonoBehaviour
         GetClosest();
         if(currentNpc != null){
             Circle.SetActive(true);
-            Circle.transform.position = currentNpc.transform.GetComponent<Renderer>().bounds.max + new Vector3(.5f,.7f);
+            Circle.transform.position = currentNpc.transform.position + currentNpc.circleOffset;
         }else{
             Circle.SetActive(false);
         }
-        if(dialogueRunner.IsDialogueRunning) return;
+        if(dialogueRunner.IsDialogueRunning) {
+            Circle.SetActive(false);
+            return;
+        };
         if(Input.GetKeyUp(interactionKey) && currentNpc != null){
             Interact();
         }

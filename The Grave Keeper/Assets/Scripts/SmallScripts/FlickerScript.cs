@@ -9,6 +9,7 @@ public class FlickerScript : MonoBehaviour
     public float off = 0;
     public float on = .8f;
     public string pattern = "mmamammmmammamamaaamammma";
+    public float incrementInSeconds = .2f;
     IEnumerator Start()
     {
         light = GetComponent<Light2D>();
@@ -16,11 +17,7 @@ public class FlickerScript : MonoBehaviour
             foreach(char c in pattern){
                 float charnr = (char.ToUpper(c) - 'A')/26f;
                 light.intensity = (on - off) * charnr + off;//(on - off) * (/26) + off;
-                yield return new WaitForEndOfFrame();   
-                yield return new WaitForEndOfFrame();   
-                yield return new WaitForEndOfFrame();   
-                yield return new WaitForEndOfFrame();   
-                yield return new WaitForEndOfFrame();   
+                yield return new WaitForSeconds(incrementInSeconds);
             }
         }
     }
