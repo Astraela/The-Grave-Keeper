@@ -5,5 +5,7 @@ tags:
     You: *Sigh*
     You: That poor boy
     You pick up the boy
+    <<call hide("BoyDead")>>
+    <<call show("Grave")>>
     <<endif>>
 ===

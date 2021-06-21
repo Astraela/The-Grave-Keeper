@@ -1,10 +1,10 @@
 ﻿title: River
 tags:
 ---
-    <<if not visited("River")>>
+    <<if visited("Grave.Woman")>>
     [[Dump the boy|River.Boy]]
     <<endif>>
-    <<if not visited("River")>>
+    <<if visited("Grave.Boy")>>
     [[Dump the woman|River.Woman]]
     <<endif>>
 ===

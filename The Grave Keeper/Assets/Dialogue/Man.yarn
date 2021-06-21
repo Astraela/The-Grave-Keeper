@@ -21,6 +21,9 @@ title: Man.WalkAway
 tags:
 ---
     You: ...
+    <<call hide("Man")>>
+    <<call hide("Boy")>>
+    <<call show("BoyDead")>>
 ===
 
 title: Man.Force
@@ -29,4 +32,7 @@ tags:
     You: Give me money or else i will throw her infront of your doorstep
     Man: Alright Alright, here!
     He throws the money at you
+    <<call hide("Man")>>
+    <<call hide("Boy")>>
+    <<call show("BoyDead")>>
 ===
