@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using Yarn.Unity;
 
 public class DialogueHelper : MonoBehaviour
@@ -26,6 +27,8 @@ public class DialogueHelper : MonoBehaviour
         dialogueRunner.AddFunction("show",1,Show);
         dialogueRunner.AddFunction("uninteractable",1,UnInteractable);
         dialogueRunner.AddFunction("interactable",1,Interactable);
+        dialogueRunner.AddFunction("scene",1,Scene);
+        dialogueRunner.AddFunction("focus",1,ChangeFocus);
     }
     
     bool Visited(Yarn.Value[] parameters)
@@ -51,6 +54,18 @@ public class DialogueHelper : MonoBehaviour
     void Show(Yarn.Value[] parameters){
         var name = parameters[0].AsString;
         Npcs[name].UpdateVisiblity(true);
+    }
+
+    void Scene(Yarn.Value[] parameters){
+        int sceneInt = (int)parameters[0].AsNumber;
+        SceneManager.LoadScene(sceneInt);
+    }
+
+    void ChangeFocus(Yarn.Value[] parameteres){
+        string focus = parameteres[0].AsString;
+        string[] sections = focus.Split(',');
+        Vector3 pos = new Vector3(float.Parse(sections[0]),float.Parse(sections[1]),float.Parse(sections[2]));
+        FindObjectOfType<CameraMovement>().setStatic(pos);
     }
 
     public void NodeComplete(string nodeName) {
