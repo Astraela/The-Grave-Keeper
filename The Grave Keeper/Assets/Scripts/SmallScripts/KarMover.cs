@@ -13,8 +13,11 @@ public class KarMover : MonoBehaviour
 
     Dictionary<Transform,Vector3> offsets = new Dictionary<Transform, Vector3>();
 
+    public float rotateSpeed = .1f;
+    Transform wheel;
     void Start()
     {
+        wheel = transform.GetChild(1);
         horseMover = FindObjectOfType<HorseMover>();
         horse = horseMover.transform;
         rb = GetComponent<Rigidbody2D>();
@@ -34,6 +37,7 @@ public class KarMover : MonoBehaviour
             movement = difference.x < 0 ? 1 : -1;
             movement = movement * speed;
             GetComponent<SpriteRenderer>().flipX = movement < 0;
+            wheel.rotation *= Quaternion.Euler(0,0,rotateSpeed * difference.x < 0 ? -1 : 1);
             foreach(KeyValuePair<Transform,Vector3> child in offsets){
                 child.Key.localPosition = new Vector3(child.Value.x * (movement < 0 ? -1 : 1), child.Value.y,0);
                 if(child.Key.GetComponent<SpriteRenderer>()){

@@ -18,6 +18,6 @@ public class StangScript : MonoBehaviour
         var dir = stang1.position - stang2.position;
         transform.rotation = Quaternion.Euler(0,0,Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg);
         transform.position = Vector3.Lerp(stang1.position,stang2.position,.5f);
-        transform.GetComponent<SpriteRenderer>().size = new Vector2(Mathf.Abs(dir.x),.1397f);
+        transform.GetComponent<SpriteRenderer>().size = new Vector2(Mathf.Abs(dir.magnitude),.1397f);
     }
 }

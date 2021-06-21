@@ -60,14 +60,5 @@ public class CameraMovement : MonoBehaviour
                 StaticUpdate();
             break;
         }
-        if(Input.GetKey(KeyCode.E)){
-            setStatic(plr.transform.position + offset + new Vector3(-7,3,0));
-        }
-        if(Input.GetKey(KeyCode.Q)){
-            setStatic(plr.transform.position + offset + new Vector3(15,-2,0));
-        }
-        if(Input.GetKey(KeyCode.R)){
-            switchState(state.Follow);
-        }
     }
 }
