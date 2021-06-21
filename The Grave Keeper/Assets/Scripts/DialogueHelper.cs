@@ -29,7 +29,7 @@ public class DialogueHelper : MonoBehaviour
         dialogueRunner.AddFunction("interactable",1,Interactable);
         dialogueRunner.AddFunction("scene",1,Scene);
         dialogueRunner.AddFunction("focus",1,ChangeFocus);
-        dialogueRunner.AddFunction("target",1,Target)
+        dialogueRunner.AddFunction("target",1,Target);
     }
     
     bool Visited(Yarn.Value[] parameters)
@@ -72,7 +72,7 @@ public class DialogueHelper : MonoBehaviour
         string focus = parameteres[0].AsString;
         string[] sections = focus.Split(',');
         Vector3 pos = new Vector3(float.Parse(sections[0]),float.Parse(sections[1]),float.Parse(sections[2]));
-        FindObjectOfType<DirectionPointerScript>().target = pos;
+        FindObjectOfType<DirectionPointerScript>().targetPosition = pos;
     }
 
     public void NodeComplete(string nodeName) {
