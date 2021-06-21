@@ -20,5 +20,10 @@ public class DirectionPointerScript : MonoBehaviour
             pointerLeft.SetActive(false);
             pointerRight.SetActive(false);
         }
+        //else if(targetPosition.x > transform.position.x-addDistance && targetPosition.x < transform.position.x+addDistance){
+        //    pointerLeft.SetActive(false);
+        //    pointerRight.SetActive(false);
+        //    pointerFollow.SetActive(true);
+        //    pointerFollow.transform.position = Camera.main.WorldToScreenPoint(targetPosition + new Vector3(0, 100, 0));
     }
 }

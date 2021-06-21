@@ -9,3 +9,17 @@ tags:
     <<endif>>
 ===
 
+title: River.Boy
+tags:
+---
+    <<call show("DoorOutside")>>
+    <<call target("12.5, -3.5, 0")>>
+===
+
+title: River.Woman
+tags:
+---
+    <<call show("DoorOutside")>>
+    <<call target("12.5, -3.5, 0")>>
+===
+

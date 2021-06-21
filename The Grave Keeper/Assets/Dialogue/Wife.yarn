@@ -8,6 +8,7 @@ tags:
     [[leave the bread|Wife.LeaveBread]]
     [[take the bread|Wife.GetBread]]
     <<endif>>
+    <<call show("DoorInside")>>
 ===
 
 title: Wife.LeaveBread

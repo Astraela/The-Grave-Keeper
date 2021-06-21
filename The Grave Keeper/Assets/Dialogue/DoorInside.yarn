@@ -1,0 +1,22 @@
+﻿title: DoorInside
+tags:
+---
+    Go outside?
+    [[Yes|DoorInside.Yes]]
+    [[No|DoorInside.No]]
+===
+
+title: DoorInside.No
+tags:
+---
+
+===
+
+title: DoorInside.Yes
+tags:
+---
+    <<call show("WifeDead")>>
+    <<call hide("Wife")>>
+    <<call scene(2)>>
+===
+

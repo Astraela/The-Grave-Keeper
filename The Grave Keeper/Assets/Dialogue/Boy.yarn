@@ -19,10 +19,12 @@ tags:
     Boy: Thank you sir
     You: Take care
     <<call show("Man")>>
+    <<call target("-28, -4, 0")>>
 ===
 
 title: Boy.Ignore
 tags:
 ---
     <<call show("Man")>>
+    <<call target("-28, -4, 0")>>
 ===

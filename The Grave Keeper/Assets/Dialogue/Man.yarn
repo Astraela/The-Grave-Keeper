@@ -24,6 +24,7 @@ tags:
     <<call hide("Man")>>
     <<call hide("Boy")>>
     <<call show("BoyDead")>>
+    <<call target("-9.15, -3.6, 0")>>
 ===
 
 title: Man.Force
@@ -35,4 +36,5 @@ tags:
     <<call hide("Man")>>
     <<call hide("Boy")>>
     <<call show("BoyDead")>>
+    <<call target("-9.15, -3.6, 0")>>
 ===

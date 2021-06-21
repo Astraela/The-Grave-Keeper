@@ -7,5 +7,6 @@ tags:
     You pick up the boy
     <<call hide("BoyDead")>>
     <<call show("Grave")>>
+    <<call target("29.25, -4, 0")>>
     <<endif>>
 ===
