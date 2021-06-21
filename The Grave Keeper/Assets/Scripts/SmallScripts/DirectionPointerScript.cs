@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class DirectionPointerScript : MonoBehaviour
 {
-    private Vector3 targetPosition;
-    private RectTransform pointerRectTransform;
-
-    private void Awake(){
-        targetPosition = new Vector3(200, 45);
-        pointerRectTransform = transform.Find("Pointer").GetComponent<RectTransform>();
-    }
+    public Vector3 targetPosition;
+    public float addDistance;
+    public GameObject pointerLeft;
+    public GameObject pointerRight;
 
     private void Update(){
-        Vector3 toPosition = targetPosition;
-        Vector3 fromPosition = Camera.main.transform.position;
+        if(targetPosition.x < transform.position.x-addDistance){
+            pointerLeft.SetActive(true);
+            pointerRight.SetActive(false);
+        }else if(targetPosition.x > transform.position.x+addDistance){
+            pointerLeft.SetActive(false);
+            pointerRight.SetActive(true);
+        }else{
+            pointerLeft.SetActive(false);
+            pointerRight.SetActive(false);
+        }
     }
 }

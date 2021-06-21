@@ -23,6 +23,7 @@ tags:
 title: Wife.GetBread
 tags:
 ---
+    <<call hide("Bread")>>
     You: Thanks
     You: Now take some rest
     You: See you soon!
