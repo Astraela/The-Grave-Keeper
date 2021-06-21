@@ -3,8 +3,7 @@ tags:
 ---
 <<if not visited("Bluey")>>
     You: You often walking around with dead pregnant women?
-    <<call scene(0)>>
-    <<call focus("1,1,1")>>
+    <<call target("1,1,1")>>
     Bluey: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
     [[Scream|Bluey.AAAAAAAAAA]]
     [[Mood|Bluey.Mood]]

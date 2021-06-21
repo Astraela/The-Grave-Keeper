@@ -10,22 +10,18 @@ public class DialogueHelper : MonoBehaviour
     // Start is called before the first frame update
     public Dictionary<string,NPC> Npcs =  new Dictionary<string, NPC>();
     DialogueRunner dialogueRunner;
-    PlayerInteraction playerInteraction;
     private HashSet<string> _visitedNodes = new HashSet<string>();
     public RectTransform dialogueText;
     public GameObject OptionsHeader;
     public GameObject OptionsFooter;
     void Awake(){
-        print("awake");
         if(FindObjectsOfType<DialogueHelper>().Length > 1) Destroy(gameObject);
     }
     void Start()
     {
-        print("start");
-        gameObject.name = "ORIGINAL";
         DontDestroyOnLoad(gameObject);
         dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
-        playerInteraction = FindObjectOfType<PlayerInteraction>();
+        gameObject.name = "ORIGINAL";
 
         dialogueRunner.AddFunction("visited", 1, (Yarn.Value[] parameters) => {return Visited(parameters);});
         dialogueRunner.AddFunction("hide",1,Hide);
@@ -92,7 +88,7 @@ public class DialogueHelper : MonoBehaviour
 	}
 
     public void DialogueCompleted(){
-        playerInteraction.DialogueEnd();
+        FindObjectOfType<PlayerInteraction>().DialogueEnd();
         dialogueText.GetComponent<Text>().text = "";
         OptionsHeader.transform.parent.gameObject.SetActive(false);
     }

@@ -19,18 +19,21 @@ public class NPC : MonoBehaviour
     public bool autoInteract = false;
     public float interactRange = 2f;
 
-    DialogueHelper dialogueHelper;
-
     public void UpdateVisiblity(bool newShow){
         if(show == newShow) return;
          GetComponent<SpriteRenderer>().enabled = newShow;
         show = newShow;
     }
 
-    void Start () { 
-        dialogueHelper = FindObjectOfType<DialogueHelper>();
+    IEnumerator Start () { 
+        yield return new WaitForEndOfFrame();
+        DialogueHelper[] dialogueHelpers = FindObjectsOfType<DialogueHelper>();
+        foreach(DialogueHelper dialogueHelper in dialogueHelpers){
+            if(dialogueHelper.transform.name == "ORIGINAL"){
+                dialogueHelper.Npcs.Add(characterName,this); 
+            }
+        }
         GetComponent<SpriteRenderer>().enabled = show;
-        dialogueHelper.Npcs.Add(characterName,this);
         if (scriptToLoad != null) {
             DialogueRunner[] dialogueRunners = FindObjectsOfType<Yarn.Unity.DialogueRunner>();
             foreach(DialogueRunner dialogueRunner in dialogueRunners){
