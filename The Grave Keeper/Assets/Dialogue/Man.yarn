@@ -2,7 +2,7 @@
 tags:
 ---
     <<if not visited("Man")>>
-    You hear the man that trew down the woman screaming at you
+    You hear the man that threw down the woman screaming at you
     Man: This is your fault you devils peasant!
     Man: You did this to her!
     [[Are you gonna pay me for that|Man.AskForMoney]]
