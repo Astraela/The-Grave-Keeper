@@ -8,7 +8,9 @@ public class CameraMovement : MonoBehaviour
     public float focusRange = 5;
     public Vector3 offset = new Vector3(0,4,-10);
 
-    Vector3 staticGoal;
+    public Vector3 staticGoal;
+
+    public bool forcedStatic;
 
     public enum state{
         Follow,
@@ -21,6 +23,7 @@ public class CameraMovement : MonoBehaviour
     }
     
     public void setStatic(Vector3 goal){
+        if(forcedStatic) return;
         staticGoal = goal;// + offset;
         switchState(state.Static);
     }
@@ -51,6 +54,10 @@ public class CameraMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(forcedStatic){
+            StaticUpdate();
+            return;
+        }
         switch (currentState)
         {
             case state.Follow:
