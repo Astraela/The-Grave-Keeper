@@ -5,15 +5,27 @@ using Yarn.Unity;
 
 public class PlayerInteraction : MonoBehaviour
 {
-
+    public GameObject Circle;
     public KeyCode interactionKey = KeyCode.E;
     public float interactionRange = 2;
     NPC currentNpc = null;
+    DialogueRunner dialogueRunner;
+    void Start(){
+        dialogueRunner = FindObjectOfType<DialogueRunner>();
+    }
+
     void Update(){
+        GetClosest();
+        if(currentNpc != null){
+            Circle.SetActive(true);
+            Circle.transform.position = currentNpc.transform.GetComponent<Renderer>().bounds.max + new Vector3(.5f,.7f);
+        }else{
+            Circle.SetActive(false);
+        }
+        if(dialogueRunner.IsDialogueRunning) return;
         if(Input.GetKeyUp(interactionKey) && currentNpc != null){
             Interact();
         }
-        GetClosest();
         if(currentNpc != null && currentNpc.autoInteract && Vector3.Distance(currentNpc.transform.position,transform.position) <= currentNpc.interactRange){
             Interact();
         }
@@ -25,8 +37,7 @@ public class PlayerInteraction : MonoBehaviour
     }
 
     void Interact(){
-        DialogueRunner dialogueRunner = FindObjectOfType<DialogueRunner>();
-        if(dialogueRunner.IsDialogueRunning) return;
+            Circle.SetActive(false);
         GetComponent<PlayerMovement>().canMove = false;
         Camera.main.GetComponent<CameraMovement>().setStatic(currentNpc.transform.position + currentNpc.offset);
         dialogueRunner.StartDialogue (currentNpc.talkToNode);
