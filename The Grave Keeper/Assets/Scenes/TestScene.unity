@@ -1489,7 +1489,7 @@ RectTransform:
   m_GameObject: {fileID: 141859434}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.73, y: 0.73, z: 0.73}
   m_Children:
   - {fileID: 101060401}
   m_Father: {fileID: 0}
@@ -15190,21 +15190,9 @@ PrefabInstance:
       propertyPath: Circle
       value: 
       objectReference: {fileID: 141859434}
-    - target: {fileID: 3732528525594811640, guid: 01add5a9b08c79e47a784834b296a5c3, type: 3}
-      propertyPath: interactionKey
-      value: 101
-      objectReference: {fileID: 0}
     - target: {fileID: 3732528525594811643, guid: 01add5a9b08c79e47a784834b296a5c3, type: 3}
       propertyPath: m_Name
       value: plr
-      objectReference: {fileID: 0}
-    - target: {fileID: 3732528525594811643, guid: 01add5a9b08c79e47a784834b296a5c3, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3732528525594811644, guid: 01add5a9b08c79e47a784834b296a5c3, type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3732528525594811645, guid: 01add5a9b08c79e47a784834b296a5c3, type: 3}
       propertyPath: m_RootOrder
