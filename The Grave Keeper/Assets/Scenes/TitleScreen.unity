@@ -1292,7 +1292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 955c87e4583b0ac4680d3b18027a540f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneToLoad: 1
+  SceneToLoad: 3
   skull: {fileID: 779163273}
 --- !u!114 &1803261641
 MonoBehaviour:
