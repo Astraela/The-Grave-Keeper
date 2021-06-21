@@ -32,8 +32,12 @@ public class NPC : MonoBehaviour
         GetComponent<SpriteRenderer>().enabled = show;
         dialogueHelper.Npcs.Add(characterName,this);
         if (scriptToLoad != null) {
-            DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
-            dialogueRunner.Add(scriptToLoad);  
+            DialogueRunner[] dialogueRunners = FindObjectsOfType<Yarn.Unity.DialogueRunner>();
+            foreach(DialogueRunner dialogueRunner in dialogueRunners){
+                if(dialogueRunner.transform.parent.name == "ORIGINAL"){
+                    dialogueRunner.Add(scriptToLoad);  
+                }
+            }
         }
     }
 }

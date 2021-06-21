@@ -15,9 +15,14 @@ public class DialogueHelper : MonoBehaviour
     public RectTransform dialogueText;
     public GameObject OptionsHeader;
     public GameObject OptionsFooter;
+    void Awake(){
+        print("awake");
+        if(FindObjectsOfType<DialogueHelper>().Length > 1) Destroy(gameObject);
+    }
     void Start()
     {
-        if(FindObjectsOfType<DialogueHelper>().Length > 1) Destroy(gameObject);
+        print("start");
+        gameObject.name = "ORIGINAL";
         DontDestroyOnLoad(gameObject);
         dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
         playerInteraction = FindObjectOfType<PlayerInteraction>();
