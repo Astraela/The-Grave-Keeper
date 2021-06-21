@@ -41,6 +41,7 @@ public class KarMover : MonoBehaviour
             GetComponent<SpriteRenderer>().flipX = movement < 0;
             wheel.rotation *= Quaternion.Euler(0,0,rotateSpeed * difference.x < 0 ? -1 : 1);
             foreach(KeyValuePair<Transform,Vector3> child in offsets){
+                if(child.Key.name == "DeadBody") continue;
                 child.Key.localPosition = new Vector3(child.Value.x * (movement < 0 ? -1 : 1), child.Value.y,0);
                 if(child.Key.GetComponent<SpriteRenderer>()){
                     child.Key.GetComponent<SpriteRenderer>().flipX = movement <0;
