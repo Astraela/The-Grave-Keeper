@@ -863,6 +863,7 @@ GameObject:
   - component: {fileID: 1254055254}
   - component: {fileID: 1254055253}
   - component: {fileID: 1254055252}
+  - component: {fileID: 1254055255}
   m_Layer: 0
   m_Name: horse2_0
   m_TagString: Untagged
@@ -954,6 +955,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1254055255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254055251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fab6b3ed9d5ef2e4597c45d36bee9978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1275321430
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,7 +1037,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.65
-  m_Text: 'Made By: Elaine, Joppe, Kris, Amy, Eline, Amber'
+  m_Text: 'Made By: Elain, Joppe, Kris, Amy, Eline, Amber'
 --- !u!222 &1275321433
 CanvasRenderer:
   m_ObjectHideFlags: 0
