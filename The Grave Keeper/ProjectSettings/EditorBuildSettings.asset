@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PlaytestInsideDeadScene.unity
     guid: 6d573c3b653a4dd40a4f8e2c67ca57bc
+  - enabled: 1
+    path: Assets/Scenes/HorseScene.unity
+    guid: 78eb6f844c486404fab307e1d588606e
   m_configObjects: {}

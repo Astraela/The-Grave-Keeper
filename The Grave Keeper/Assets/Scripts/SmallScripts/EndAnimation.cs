@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EndAnimation : AnimationComponent
 {
@@ -28,6 +29,9 @@ public class EndAnimation : AnimationComponent
                     Color color = fade.color;
                     color.a += 1/255f;
                     fade.color = color;
+                    if(color.a >= 1){
+                        SceneManager.LoadScene(5);
+                    }
                 }
             }
         }
