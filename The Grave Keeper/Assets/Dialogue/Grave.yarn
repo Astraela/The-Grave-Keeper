@@ -11,7 +11,9 @@ tags:
     ...
     Gravekeeper: *sigh*
     You decide to...
+    <<if visited("Boy.Ignore")>>
     [[Bury the boy|Grave.Boy]]
+    <<endif>>
     [[Bury the pregnant lady|Grave.Woman]]
     <<endif>>
 ===
@@ -40,7 +42,12 @@ tags:
     Gravekeeper: Like trash
     Find a place for the boy
     <<call hide("Grave")>>
+    <<if visited("Boy.Ignore")>>
     <<call show("River")>>
     <<call target("5, -3.6, 0")>>
+    <<else>>
+    <<call show("DoorOutside")>>
+    <<call target("12.5, -3.5, 0")>>
+    <<endif>>
     <<call hide("DeadBody")>>
 ===

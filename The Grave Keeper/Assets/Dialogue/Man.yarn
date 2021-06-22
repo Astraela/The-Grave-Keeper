@@ -32,8 +32,10 @@ tags:
 ---
     Gravekeeper: ...
     <<call hide("Man")>>
+    <<if visited("Boy.Ignore")>>
     <<call hide("Boy")>>
     <<call show("BoyDead")>>
+    <<endif>>
     <<call target("-9.15, -3.6, 0")>>
     <<call show("Direction.Church")>>
 ===
@@ -45,8 +47,10 @@ tags:
     Man: Alright Alright, here!
     He throws the money at you
     <<call hide("Man")>>
+    <<if visited("Boy.Ignore")>>
     <<call hide("Boy")>>
     <<call show("BoyDead")>>
+    <<endif>>
     <<call target("-9.15, -3.6, 0")>>
     <<call show("Direction.Church")>>
 ===
