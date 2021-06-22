@@ -1,20 +1,8 @@
 ﻿title: DoorOutside
 tags:
 ---
-    Go inside?
-    [[Yes|DoorOutside.Yes]]
-    [[No|DoorOutside.No]]
-===
-
-title: DoorOutside.No
-tags:
----
-
-===
-
-title: DoorOutside.Yes
-tags:
----
+    After a long day of work you come back home
     <<call scene(4)>>
 ===
+
 

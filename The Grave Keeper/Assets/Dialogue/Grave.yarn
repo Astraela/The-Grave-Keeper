@@ -2,7 +2,15 @@
 tags:
 ---
     <<if not visited("Grave")>>
-    there is only one spot for the boy or the woman
+    When standing at the grave, you notice that there is only one spot left
+    Now it hits you
+    So many people around you died
+    Yet you still live
+    And again you have to bury more
+    Day in day out
+    ...
+    you: *sigh*
+    You decide to...
     [[Bury the boy|Grave.Boy]]
     [[Bury the woman|Grave.Woman]]
     <<endif>>
@@ -12,6 +20,11 @@ title: Grave.Boy
 tags:
 ---
     You bury the boy
+    You: He didnt deserve this
+    You: He was still so young
+    You: And all alone
+    You: Just thrown away like trash
+    Find a place for the woman
     <<call hide("Grave")>>
     <<call show("River")>>
     <<call target("5, -3.6, 0")>>
@@ -22,6 +35,10 @@ title: Grave.Woman
 tags:
 ---
     You bury the woman
+    You: She was still pregnant
+    You: Just simply thrown down the window
+    You: Like trash
+    Find a place for the boy
     <<call hide("Grave")>>
     <<call show("River")>>
     <<call target("5, -3.6, 0")>>

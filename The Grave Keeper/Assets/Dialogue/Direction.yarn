@@ -1,0 +1,21 @@
+﻿title: Direction.Town
+tags:
+---
+	You head to town
+	<<call hide("Direction.Town")>>
+===
+
+title: Direction.Bell
+tags:
+---
+	You head further into town
+	<<call hide("Direction.Bell")>>
+===
+
+title: Direction.Church
+tags:
+---
+	You pick up your money
+	You go back, the other direction, to the church
+	<<call hide("Direction.Church")>>
+===

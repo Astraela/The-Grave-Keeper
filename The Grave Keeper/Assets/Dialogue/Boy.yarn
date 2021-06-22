@@ -20,6 +20,7 @@ tags:
     You: Take care
     <<call show("Man")>>
     <<call target("-28, -4, 0")>>
+    <<call show("Direction.Bell")>>
 ===
 
 title: Boy.Ignore
@@ -28,4 +29,5 @@ tags:
     You walk away
     <<call show("Man")>>
     <<call target("-28, -4, 0")>>
+    <<call show("Direction.Bell")>>
 ===
