@@ -32,6 +32,7 @@ public class DialogueHelper : MonoBehaviour
         dialogueRunner.AddFunction("focus",1,ChangeFocus);
         dialogueRunner.AddFunction("target",1,Target);
         dialogueRunner.AddFunction("animate",1,Animate);
+        dialogueRunner.AddFunction("flipplr",0,FlipPlr);
     }
     
     bool Visited(Yarn.Value[] parameters)
@@ -84,6 +85,10 @@ public class DialogueHelper : MonoBehaviour
         }else{
             Debug.LogError("No AnimationComponent found");
         }
+    }
+
+    void FlipPlr(Yarn.Value[] parameters){
+        FindObjectOfType<PlayerMovement>().GetComponent<SpriteRenderer>().flipX = !FindObjectOfType<PlayerMovement>().GetComponent<SpriteRenderer>().flipX;
     }
 
     public void NodeComplete(string nodeName) {

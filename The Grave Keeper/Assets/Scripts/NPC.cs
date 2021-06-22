@@ -28,7 +28,12 @@ public class NPC : MonoBehaviour
     IEnumerator Start () { 
         yield return new WaitForEndOfFrame();
         DialogueHelper dialogueHelper = FindObjectOfType<DialogueHelper>();
-                dialogueHelper.Npcs.Add(characterName,this); 
+        if(dialogueHelper.Npcs.ContainsKey(characterName)){
+            show = dialogueHelper.Npcs[characterName].show;
+            dialogueHelper.Npcs[characterName] = this;
+        }else{
+                dialogueHelper.Npcs.Add(characterName,this);
+        }
         GetComponent<SpriteRenderer>().enabled = show;
         if (scriptToLoad != null) {
             DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
