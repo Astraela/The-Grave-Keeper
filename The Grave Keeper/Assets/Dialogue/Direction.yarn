@@ -15,7 +15,9 @@ tags:
 title: Direction.Church
 tags:
 ---
+	<<if visited("Man.WalkAway")>>
 	You pick up your money
+	<<endif>>
 	You go back, the other direction, to the church
 	<<call hide("Direction.Church")>>
 ===
