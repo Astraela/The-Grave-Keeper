@@ -30,11 +30,16 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
+        float movement = Input.GetAxisRaw("Horizontal");
+        if(movement == 0){
+            audioSource.Pause();
+        } else{
+            audioSource.UnPause();
+        }
         if(!canMove){
             GetComponent<Animator>().SetBool("Walking",false);
             return;
         }
-        float movement = Input.GetAxisRaw("Horizontal");
         movement = movement * speed;
         grounded = isGrounded();
         rb.velocity = new Vector2(movement,grounded?3:0);
@@ -42,8 +47,6 @@ public class PlayerMovement : MonoBehaviour
             GetComponent<SpriteRenderer>().flipX = movement > 0;
             GetComponentInChildren<ShadowFlip>().Flip(movement < 0);
             audioSource.UnPause();
-        } else{
-            audioSource.Pause();
         }
             GetComponent<Animator>().SetBool("Walking",movement != 0);
         rb.isKinematic = movement == 0;

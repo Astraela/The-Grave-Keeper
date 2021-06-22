@@ -8,6 +8,7 @@ using Yarn.Unity;
 public class DialogueHelper : MonoBehaviour
 {
     public Dictionary<string,AnimationComponent> animators = new Dictionary<string, AnimationComponent>();
+    public Dictionary<string,SoundComponent> sounds = new Dictionary<string, SoundComponent>();
     public Dictionary<string,NPC> Npcs =  new Dictionary<string, NPC>();
     DialogueRunner dialogueRunner;
     private HashSet<string> _visitedNodes = new HashSet<string>();
@@ -33,6 +34,7 @@ public class DialogueHelper : MonoBehaviour
         dialogueRunner.AddFunction("target",1,Target);
         dialogueRunner.AddFunction("animate",1,Animate);
         dialogueRunner.AddFunction("flipplr",0,FlipPlr);
+        dialogueRunner.AddFunction("audio",1,Audio);
     }
     
     bool Visited(Yarn.Value[] parameters)
@@ -89,6 +91,10 @@ public class DialogueHelper : MonoBehaviour
 
     void FlipPlr(Yarn.Value[] parameters){
         FindObjectOfType<PlayerMovement>().GetComponent<SpriteRenderer>().flipX = !FindObjectOfType<PlayerMovement>().GetComponent<SpriteRenderer>().flipX;
+    }
+
+    void Audio(Yarn.Value[] parameters){
+        sounds[parameters[0].AsString].Play();
     }
 
     public void NodeComplete(string nodeName) {
