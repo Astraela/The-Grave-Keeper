@@ -20,7 +20,6 @@ public class OpeningFade : AnimationComponent
     }
 
     IEnumerator Fade(){
-        print("Test");
         while(true){
             c.a -= step * Time.deltaTime;
             GetComponent<Image>().color = c;
