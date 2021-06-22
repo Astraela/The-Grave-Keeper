@@ -15,6 +15,7 @@ tags:
     <<call show("DoorOutside")>>
     <<call target("12.5, -3.5, 0")>>
     <<call hide("River")>>
+    <<call hide("BoyBody")>>
 ===
 
 title: River.Woman
@@ -23,5 +24,6 @@ tags:
     <<call show("DoorOutside")>>
     <<call target("12.5, -3.5, 0")>>
     <<call hide("River")>>
+    <<call hide("DeadBody")>>
 ===
 

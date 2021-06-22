@@ -15,6 +15,7 @@ tags:
     <<call hide("Grave")>>
     <<call show("River")>>
     <<call target("5, -3.6, 0")>>
+    <<call hide("BoyBody")>>
 ===
 
 title: Grave.Woman
@@ -24,4 +25,5 @@ tags:
     <<call hide("Grave")>>
     <<call show("River")>>
     <<call target("5, -3.6, 0")>>
+    <<call hide("DeadBody")>>
 ===

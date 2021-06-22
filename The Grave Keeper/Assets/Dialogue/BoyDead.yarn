@@ -8,5 +8,6 @@ tags:
     <<call hide("BoyDead")>>
     <<call show("Grave")>>
     <<call target("29.25, -4, 0")>>
+    <<call show("BoyBody")>>
     <<endif>>
 ===

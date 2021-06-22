@@ -162,7 +162,7 @@ MonoBehaviour:
   - {x: -7.3732896, y: 2.362214, z: 0}
   m_ShapePathHash: -1105019312
   m_Mesh: {fileID: 0}
-  m_InstanceId: 102236
+  m_InstanceId: 54848
 --- !u!1 &1335244053
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,7 +252,7 @@ MonoBehaviour:
   - {x: -2.119233, y: 1.8640051, z: 0}
   m_ShapePathHash: 556676450
   m_Mesh: {fileID: 0}
-  m_InstanceId: 102242
+  m_InstanceId: 54854
 --- !u!1 &1615790071
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,13 +420,14 @@ GameObject:
   m_Component:
   - component: {fileID: 5932726040252675610}
   - component: {fileID: 885099699829127323}
+  - component: {fileID: 2644892466730285356}
   m_Layer: 7
   m_Name: feet babey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5932726040252675610
 Transform:
   m_ObjectHideFlags: 0
@@ -435,7 +436,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509088445593269699}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4, y: 3.6, z: 0}
+  m_LocalPosition: {x: 2.5, y: -0.9, z: 0}
   m_LocalScale: {x: 0.7214204, y: 0.7214204, z: 0.7214204}
   m_Children: []
   m_Father: {fileID: 6987729216721355562}
@@ -480,7 +481,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -5
   m_Sprite: {fileID: 21300000, guid: efb1f5d49cd995548b432b5a1aa489a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -492,6 +493,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2644892466730285356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509088445593269699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4372cbc2cae26b48814b70c9781f82a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  show: 0
+  characterName: BoyBody
+  offset: {x: 0, y: 0, z: 0}
+  circleOffset: {x: 0, y: 0, z: 0}
+  talkToNode: BoyBody
+  interactable: 0
+  scriptToLoad: {fileID: 0}
+  autoInteract: 0
+  interactRange: 2
 --- !u!1 &3512131376789779330
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,6 +579,7 @@ Transform:
   - {fileID: 747120488742776315}
   - {fileID: 5932726040252675610}
   - {fileID: 377370753}
+  - {fileID: 6079570703826651505}
   m_Father: {fileID: 6965979696585989656}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -966,11 +989,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7284621728952667406}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.2764015, y: 13.109303, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1.2, y: 40, z: 0}
+  m_LocalScale: {x: 5.279821, y: 5.279821, z: 5.279821}
   m_Children: []
-  m_Father: {fileID: 6965979696585989656}
-  m_RootOrder: 3
+  m_Father: {fileID: 6987729216721355562}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8706935064222744975
 GameObject:
@@ -1003,7 +1026,6 @@ Transform:
   - {fileID: 6987729216721355562}
   - {fileID: 1494621863980671447}
   - {fileID: 3934286745918222234}
-  - {fileID: 6079570703826651505}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1019,8 +1041,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f47511c1bf54d4a42b847d0e09730e85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  identifier: DeadBody
+  setbool: 1
+  boolean: 
   fallPosition: {fileID: 7284621728952667406}
   woman: {fileID: 6790610971765830058, guid: f9e63a0b1cc8c6d43a362a0923edfcf9, type: 3}
+  body: {fileID: 0}
 --- !u!1 &9152602719959353078
 GameObject:
   m_ObjectHideFlags: 0

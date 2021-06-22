@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6790610971765830056}
   - component: {fileID: 6790610971765830057}
   - component: {fileID: 8260336417258679297}
+  - component: {fileID: 8582245014102556257}
   m_Layer: 0
   m_Name: Dead body
   m_TagString: Untagged
@@ -144,3 +145,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc6e5dbe774e2c24f8b740aa2a614cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8582245014102556257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6790610971765830058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4372cbc2cae26b48814b70c9781f82a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  show: 1
+  characterName: DeadBody
+  offset: {x: 0, y: 0, z: 0}
+  circleOffset: {x: 0, y: 0, z: 0}
+  talkToNode: DeadBody
+  interactable: 0
+  scriptToLoad: {fileID: 0}
+  autoInteract: 0
+  interactRange: 2

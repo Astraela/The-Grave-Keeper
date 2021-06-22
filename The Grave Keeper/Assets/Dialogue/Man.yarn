@@ -1,12 +1,15 @@
 ﻿title: Man
 tags:
 ---
-    <<if not visited("Man")>>
-    You hear the man that trew down the woman screaming at you
+    You ring the bell and call out
+    You: BRING OUT THE DEAD!!
+    <<call animate("DeadBody")>>
+    <<call focus("-22,-3,-50")>>
+    After that you see a body fall down
+    A man high up at the window screams at you
     Man: This is your fault you devils peasant!
-    Man: You did this to her!
+    Man: You did this to her and my child!
     [[Are you gonna pay me for that|Man.AskForMoney]]
-    <<endif>>
 ===
 
 title: Man.AskForMoney
