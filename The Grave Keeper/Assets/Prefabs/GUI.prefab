@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 6147199117955102943}
   - component: {fileID: 6147199117955102930}
   - component: {fileID: 6147199117955102941}
-  - component: {fileID: 6147199117955102940}
+  - component: {fileID: 96161583}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6147199117955102940
+--- !u!114 &96161583
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,4 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a77ebfa02ab26d41a5d7641c3429dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  step: 0.36
+  identifier: OpeningFade
+  setbool: 1
+  boolean: 
+  step: 0.01

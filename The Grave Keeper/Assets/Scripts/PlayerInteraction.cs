@@ -43,7 +43,11 @@ public class PlayerInteraction : MonoBehaviour
             Circle.SetActive(false);
         GetComponent<PlayerMovement>().canMove = false;
         Camera.main.GetComponent<CameraMovement>().setStatic(currentNpc.transform.position + currentNpc.offset);
-        dialogueRunner.StartDialogue (currentNpc.talkToNode);
+        if(FindObjectOfType<DialogueRunner>().NodeExists(currentNpc.talkToNode)){
+            dialogueRunner.StartDialogue (currentNpc.talkToNode);
+        }else{
+            Debug.LogWarning("node does not exist | "+ currentNpc.talkToNode);
+        }
     }
 
     void GetClosest(){

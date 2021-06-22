@@ -37,7 +37,7 @@ public class HorseSpawner : MonoBehaviour
         Horse.transform.localScale = new Vector3(size,size,size);
         Horse.SetActive(true);
         while(c.a < 1){
-            c.a += 1f/350f;
+            c.a += 1f/650f;
             sr.color = c;
             yield return new WaitForEndOfFrame();
         }

@@ -1,0 +1,24 @@
+﻿title: Fade
+tags:
+---
+    <<call uninteractable("Fade")>>
+    You're a gravepeeker in 1350, the age of the black death
+    Are you ready?
+    [[Yes|Fade.Yes]]
+    [[No|Fade.No]]
+===
+
+
+title: Fade.Yes
+tags:
+---
+    lets-a-go :)
+    <<call animate("OpeningFade")>>
+===
+
+title: Fade.No
+tags:
+---
+    :( why?
+    <<call animate("OpeningFade")>>
+===
