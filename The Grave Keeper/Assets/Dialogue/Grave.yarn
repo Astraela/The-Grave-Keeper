@@ -9,10 +9,10 @@ tags:
     And again you have to bury more
     Day in day out
     ...
-    you: *sigh*
+    Gravekeeper: *sigh*
     You decide to...
     [[Bury the boy|Grave.Boy]]
-    [[Bury the woman|Grave.Woman]]
+    [[Bury the pregnant lady|Grave.Woman]]
     <<endif>>
 ===
 
@@ -20,11 +20,11 @@ title: Grave.Boy
 tags:
 ---
     You bury the boy
-    You: He didnt deserve this
-    You: He was still so young
-    You: And all alone
-    You: Just thrown away like trash
-    Find a place for the woman
+    Gravekeeper: He didnt deserve this
+    Gravekeeper: He was still so young
+    Gravekeeper: And all alone
+    Gravekeeper: Just thrown away like trash
+    Find a place for the lady
     <<call hide("Grave")>>
     <<call show("River")>>
     <<call target("5, -3.6, 0")>>
@@ -34,10 +34,10 @@ tags:
 title: Grave.Woman
 tags:
 ---
-    You bury the woman
-    You: She was still pregnant
-    You: Just simply thrown down the window
-    You: Like trash
+    You bury the lady
+    Gravekeeper: She was still pregnant
+    Gravekeeper: Just simply thrown down the window
+    Gravekeeper: Like trash
     Find a place for the boy
     <<call hide("Grave")>>
     <<call show("River")>>

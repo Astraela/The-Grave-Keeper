@@ -3,7 +3,7 @@ tags:
 ---
     <<if not visited("Wife")>>
     Wife: Can you promise me to be carefull sweetheart
-    You: I will
+    Gravekeeper: I will
     Wife: Here, take this bread
     [[leave the bread|Wife.LeaveBread]]
     [[take the bread|Wife.GetBread]]
@@ -13,11 +13,11 @@ tags:
 title: Wife.LeaveBread
 tags:
 ---
-    You: No you keep it
-    You: Now take some rest
-    You: See you soon!
+    Gravekeeper: No you keep it
+    Gravekeeper: Now take some rest
+    Gravekeeper: See you soon!
     Wife: Love you
-    You: Love you too
+    Gravekeeper: Love you too
     <<call show("DoorInside")>>
 ===
 
@@ -25,10 +25,10 @@ title: Wife.GetBread
 tags:
 ---
     <<call hide("Bread")>>
-    You: Thanks
-    You: Now take some rest
-    You: See you soon!
+    Gravekeeper: Thanks
+    Gravekeeper: Now take some rest
+    Gravekeeper: See you soon!
     Wife: Love you
-    You: Love you too
+    Gravekeeper: Love you too
     <<call show("DoorInside")>>
 ===

@@ -15,9 +15,9 @@ tags:
 title: Boy.Help
 tags:
 ---
-    You: Here boy, i have some bread on me.
+    Gravekeeper: Here boy, i have some bread on me.
     Boy: Thank you sir
-    You: Take care
+    Gravekeeper: Take care
     <<call show("Man")>>
     <<call target("-28, -4, 0")>>
     <<call show("Direction.Bell")>>

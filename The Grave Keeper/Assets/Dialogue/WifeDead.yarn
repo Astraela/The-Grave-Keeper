@@ -3,7 +3,17 @@ tags:
 ---
     <<call uninteractable("WifeDead")>>
     <<if not visited("WifeDead")>>
-    You fall on your knees and cry
+    You find your wife
+    Sitting in a chair
+    Dead..
+    Gravekeeper: This is my fault
+    Gravekeeper: I left her here to die alone
+    <<if visited("Wife.GetBread")>>
+    Gravekeeper: And i took the bread she needed
+    <<endif>>
+    Gravekeeper: ...
+    You fall to your knees and cry
+    (Animation stil WIP)
     <<call animate("WifeDead")>>
     <<endif>>
 ===

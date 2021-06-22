@@ -2,9 +2,9 @@
 tags:
 ---
     <<if not visited("BoyDead")>>
-    You: *Sigh*
-    You: That poor boy
-    You: He died in such a short amount of time
+    Gravekeeper: *Sigh*
+    Gravekeeper: That poor boy
+    Gravekeeper: He died in such a short amount of time
     You pick up the boy
     <<call hide("BoyDead")>>
     <<call show("Grave")>>

@@ -2,16 +2,20 @@
 tags:
 ---
     <<if visited("Grave.Woman")>>
-    [[Dump the boy|River.Boy]]
+    [[Throw the boy into the river|River.Boy]]
     <<endif>>
     <<if visited("Grave.Boy")>>
-    [[Dump the woman|River.Woman]]
+    [[Throw the woman into the river|River.Woman]]
     <<endif>>
 ===
 
 title: River.Boy
 tags:
 ---
+    Gravekeeper: He didnt deserve this
+    Gravekeeper: He was still so young
+    Gravekeeper: And all alone
+    Gravekeeper: For nature to feed upon
     <<call show("DoorOutside")>>
     <<call target("12.5, -3.5, 0")>>
     <<call hide("River")>>
@@ -21,6 +25,10 @@ tags:
 title: River.Woman
 tags:
 ---
+    Gravekeeper: She was still pregnant
+    Gravekeeper: Just simply thrown down the window
+    Gravekeeper: Abandoned by her husband
+    Gravekeeper: Now food for nature
     <<call show("DoorOutside")>>
     <<call target("12.5, -3.5, 0")>>
     <<call hide("River")>>
