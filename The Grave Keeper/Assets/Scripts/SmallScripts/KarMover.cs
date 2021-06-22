@@ -15,8 +15,13 @@ public class KarMover : MonoBehaviour
 
     public float rotateSpeed = .1f;
     Transform wheel;
+        AudioSource audioSource;
+    public bool grounded = true;
+    SpriteRenderer sr;
+
     void Start()
     {
+        sr = GetComponent<SpriteRenderer>();
         wheel = transform.GetChild(1);
         horseMover = FindObjectOfType<HorseMover>();
         horse = horseMover.transform;
@@ -25,8 +30,18 @@ public class KarMover : MonoBehaviour
         foreach(Transform child in transform){
             offsets.Add(child,child.localPosition);
         }
+        audioSource = GetComponent<AudioSource>();
     }
 
+    bool isGrounded(){
+        Vector2 offset = new Vector3(.9f,1.4f);
+        var ray1 = Physics2D.Raycast(transform.position + new Vector3(offset.x,0,0), -Vector3.up,offset.y+.0f,LayerMask.GetMask("Default"));
+        var ray2 = Physics2D.Raycast(transform.position - new Vector3(offset.x,0,0), -Vector3.up,offset.y+.0f,LayerMask.GetMask("Default"));
+        Debug.DrawRay(transform.position - new Vector3(offset.x,0,0), -Vector3.up,Color.green, offset.y+.0f);
+        if(Mathf.Abs(ray1.point.y - ray2.point.y) >=.1f)
+            return true;
+        return false;
+    }
 
     void Update()
     {
@@ -49,6 +64,12 @@ public class KarMover : MonoBehaviour
                 }
             }
         }
-            rb.velocity = new Vector2(movement,0);
+        if(movement == 0){
+            audioSource.Pause();
+        }else{
+            audioSource.UnPause();
+        }
+        grounded = isGrounded();
+        rb.velocity = new Vector2(movement,grounded?3:0);
     }
 }
