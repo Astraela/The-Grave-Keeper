@@ -25,6 +25,7 @@ tags:
 title: Boy.Ignore
 tags:
 ---
+    You walk away
     <<call show("Man")>>
     <<call target("-28, -4, 0")>>
 ===

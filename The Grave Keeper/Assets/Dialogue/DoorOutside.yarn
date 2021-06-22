@@ -16,6 +16,5 @@ title: DoorOutside.Yes
 tags:
 ---
     <<call scene(4)>>
-    <<call hide("Wife")>>
 ===
 
