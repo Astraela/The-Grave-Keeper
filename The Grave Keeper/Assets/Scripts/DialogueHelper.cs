@@ -7,7 +7,7 @@ using Yarn.Unity;
 
 public class DialogueHelper : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Dictionary<string,AnimationComponent> animators = new Dictionary<string, AnimationComponent>();
     public Dictionary<string,NPC> Npcs =  new Dictionary<string, NPC>();
     DialogueRunner dialogueRunner;
     private HashSet<string> _visitedNodes = new HashSet<string>();
@@ -31,6 +31,7 @@ public class DialogueHelper : MonoBehaviour
         dialogueRunner.AddFunction("scene",1,Scene);
         dialogueRunner.AddFunction("focus",1,ChangeFocus);
         dialogueRunner.AddFunction("target",1,Target);
+        dialogueRunner.AddFunction("animate",1,Animate);
     }
     
     bool Visited(Yarn.Value[] parameters)
@@ -74,6 +75,15 @@ public class DialogueHelper : MonoBehaviour
         string[] sections = focus.Split(',');
         Vector3 pos = new Vector3(float.Parse(sections[0]),float.Parse(sections[1]),float.Parse(sections[2]));
         FindObjectOfType<DirectionPointerScript>().targetPosition = pos;
+    }
+
+    void Animate(Yarn.Value[] parameters){
+        AnimationComponent animComp = animators[parameters[0].AsString];
+        if(animComp != null){
+            animComp.Animate();
+        }else{
+            Debug.LogError("No AnimationComponent found");
+        }
     }
 
     public void NodeComplete(string nodeName) {

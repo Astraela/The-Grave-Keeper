@@ -27,20 +27,12 @@ public class NPC : MonoBehaviour
 
     IEnumerator Start () { 
         yield return new WaitForEndOfFrame();
-        DialogueHelper[] dialogueHelpers = FindObjectsOfType<DialogueHelper>();
-        foreach(DialogueHelper dialogueHelper in dialogueHelpers){
-            if(dialogueHelper.transform.name == "ORIGINAL"){
+        DialogueHelper dialogueHelper = FindObjectOfType<DialogueHelper>();
                 dialogueHelper.Npcs.Add(characterName,this); 
-            }
-        }
         GetComponent<SpriteRenderer>().enabled = show;
         if (scriptToLoad != null) {
-            DialogueRunner[] dialogueRunners = FindObjectsOfType<Yarn.Unity.DialogueRunner>();
-            foreach(DialogueRunner dialogueRunner in dialogueRunners){
-                if(dialogueRunner.transform.parent.name == "ORIGINAL"){
+            DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
                     dialogueRunner.Add(scriptToLoad);  
-                }
-            }
         }
     }
 }
