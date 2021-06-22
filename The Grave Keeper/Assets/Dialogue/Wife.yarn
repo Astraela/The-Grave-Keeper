@@ -8,7 +8,6 @@ tags:
     [[leave the bread|Wife.LeaveBread]]
     [[take the bread|Wife.GetBread]]
     <<endif>>
-    <<call show("DoorInside")>>
 ===
 
 title: Wife.LeaveBread
@@ -19,6 +18,7 @@ tags:
     You: See you soon!
     Wife: Love you
     You: Love you too
+    <<call show("DoorInside")>>
 ===
 
 title: Wife.GetBread
@@ -30,4 +30,5 @@ tags:
     You: See you soon!
     Wife: Love you
     You: Love you too
+    <<call show("DoorInside")>>
 ===

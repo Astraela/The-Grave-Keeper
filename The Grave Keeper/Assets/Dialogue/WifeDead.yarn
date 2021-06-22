@@ -1,0 +1,7 @@
+﻿title: WifeDead
+tags:
+---
+    <<if not visited("WifeDead")>>
+    startAnimationHere
+    <<endif>>
+===

@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/PlaytestScene.unity
     guid: bcd645f53ab6e1146805b44c4a729fa9
   - enabled: 1
-    path: Assets/Scenes/PlaytestInsideScene.unity
+    path: Assets/Scenes/PlaytestInsideAliveScene.unity
+    guid: f0c56b278a199d44cb8332e7b45c56b1
+  - enabled: 1
+    path: Assets/Scenes/PlaytestInsideDeadScene.unity
     guid: 6d573c3b653a4dd40a4f8e2c67ca57bc
   m_configObjects: {}

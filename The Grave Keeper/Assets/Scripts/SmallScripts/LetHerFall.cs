@@ -6,15 +6,11 @@ public class LetHerFall : MonoBehaviour
 {
     public GameObject fallPosition;
     public GameObject woman;
-
-    void Start(){
-        SpawnWoman();
-    }
-
+    public GameObject body;
 
     public void SpawnWoman(){
-        GameObject clone = Instantiate(woman, fallPosition.transform.position, Quaternion.identity);
-        clone.transform.parent = gameObject.transform.GetChild(0).transform;
-        clone.transform.name = "DeadBody";
+        body = Instantiate(woman, fallPosition.transform.position, Quaternion.identity);
+        body.transform.parent = gameObject.transform.GetChild(0).transform;
+        body.transform.name = "DeadBody";
     }
 }

@@ -15,8 +15,6 @@ tags:
 title: DoorInside.Yes
 tags:
 ---
-    <<call show("WifeDead")>>
-    <<call hide("Wife")>>
     <<call scene(2)>>
 ===
 
