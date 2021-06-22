@@ -1,7 +1,9 @@
 ﻿title: WifeDead
 tags:
 ---
+    <<call uninteractable("WifeDead")>>
     <<if not visited("WifeDead")>>
-    startAnimationHere
+    You fall on your knees and cry
+    <<call animate("WifeDead")>>
     <<endif>>
 ===
