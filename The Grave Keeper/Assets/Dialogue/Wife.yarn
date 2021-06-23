@@ -2,7 +2,7 @@
 tags:
 ---
     <<if not visited("Wife")>>
-    Wife: Can you promise me to be careful sweetheart
+    Wife: Can you promise me to be careful, sweetheart?
     Gravekeeper: I will
     Wife: Here, take this bread
     [[leave the bread|Wife.LeaveBread]]
