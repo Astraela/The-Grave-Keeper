@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        float movement = Input.GetAxisRaw("Horizontal");
+        float movement = 0;
         if(movement == 0){
             audioSource.Pause();
         } else{
@@ -40,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
             GetComponent<Animator>().SetBool("Walking",false);
             return;
         }
+        movement = Input.GetAxisRaw("Horizontal");
         movement = movement * speed;
         grounded = isGrounded();
         rb.velocity = new Vector2(movement,grounded?3:0);

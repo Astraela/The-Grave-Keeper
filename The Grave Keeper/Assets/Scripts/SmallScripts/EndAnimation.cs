@@ -12,9 +12,12 @@ public class EndAnimation : AnimationComponent
     public Light2D wifeSpotlight;
     public Image fade;
     public Sprite spriteObject;
+    public Light2D Freeform;
+    public Light2D pointlight;
     public override void Animate()
     {
         StartCoroutine("Lights");
+        Destroy(transform.GetChild(1));
         Destroy(GetComponent<Animator>());
     }
 
@@ -22,8 +25,10 @@ public class EndAnimation : AnimationComponent
         while(true){
             FindObjectOfType<PlayerMovement>().canMove = false;
             yield return new WaitForEndOfFrame();
-            if(globalLight.intensity >= 0){
+            if(globalLight.intensity >= 0 || Freeform.intensity >= 0 || pointlight.intensity >= 0){
                 globalLight.intensity -= 0.002f;
+                Freeform.intensity -= 0.002f;
+                pointlight.intensity -= 0.004f;
             }else{
                 if(playerSpotlight.intensity <= 1f){
                     playerSpotlight.intensity += 0.001f;
