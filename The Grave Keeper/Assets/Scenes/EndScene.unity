@@ -952,6 +952,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 3732528525594811641, guid: 01add5a9b08c79e47a784834b296a5c3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 01add5a9b08c79e47a784834b296a5c3, type: 3}
+--- !u!4 &1789254698 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3732528525594811645, guid: 01add5a9b08c79e47a784834b296a5c3, type: 3}
+  m_PrefabInstance: {fileID: 1432163766}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1803620152
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,12 +1088,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   show: 1
-  characterName: Boy
+  characterName: EndDialogue
   offset: {x: 0, y: 0, z: -20}
   circleOffset: {x: 0, y: 0, z: 0}
-  talkToNode: Boy
+  talkToNode: EndDialogue
   interactable: 1
-  scriptToLoad: {fileID: 2480198943629176163, guid: 0aed6c4a7a8ce864cbbd7ab879c43a18, type: 3}
+  scriptToLoad: {fileID: 2480198943629176163, guid: 93331720e1095eb4ca52ccd22ba23a90, type: 3}
   autoInteract: 1
   interactRange: 2
 --- !u!212 &1845529962
@@ -1449,7 +1454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d1951f901ef414d8016a08aff87510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plr: {fileID: 0}
+  plr: {fileID: 1789254698}
   focusRange: 5
   offset: {x: 0, y: 4, z: -10}
   staticGoal: {x: 0, y: 0, z: 0}

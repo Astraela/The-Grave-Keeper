@@ -2,13 +2,13 @@
 tags:
 ---
     <<if not visited("Boy")>>
-    Boy: Please, sir..
-    Boy: Can you help me?
-    Boy: Do you have some food or money maybe?
-    [[Ignore him|Boy.Ignore]]
-    <<if visited("Wife.GetBread")>>
-    [[Give him your bread|Boy.Help]]
-    <<endif>>
+        Boy: Please, sir..
+        Boy: Can you help me?
+        Boy: Do you have some food or money maybe?
+        [[Ignore him|Boy.Ignore]]
+        <<if visited("Wife.GetBread")>>
+            [[Give him your bread|Boy.Help]]
+        <<endif>>
     <<endif>>
 ===
 

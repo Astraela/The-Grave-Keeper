@@ -1,0 +1,34 @@
+﻿title: EndDialogue
+tags:
+---
+<<call hide("EndDialogue")>>
+<<if visited("Boy.Help")>>
+    The boy got to live,
+    He could see another day because of you,
+    But he soon succumbed to his illness.
+<<elseif visited("Wife.LeaveBread")>>
+    Luckily your wife was only asleep and not dead. 
+    Hopefully you can live out the rest of your short lives together.
+<<else>>
+    As long as your body can carry others you will continue to do so.
+    Death does not stop because you’re grieving so you have to keep working.
+<<endif>>
+
+<<if visited("River.Boy") or visited("River.Women")>>
+    The body you dumbed into river causes an outbreak into the village next over.
+    Your ignorance keeps going, but your actions caused a village to be wiped out.
+<<endif>>
+
+<<if visited("Man.Force")>>
+    Due to your demand of the money, 
+    the man, in grief, died of famine.
+<<elsif visited("Man.WalkAway")>>
+    You let the man keep his money and he gets to eat more days.
+    But he soon ended his own life, due to grief.
+<<endif>>
+...
+<<wait 5>>
+  
+<<call scene(0)>>
+
+===
