@@ -127,5 +127,6 @@ public class DialogueHelper : MonoBehaviour
     public void Reset(){
         Npcs = new Dictionary<string, NPC>();
         _visitedNodes = new HashSet<string>();
+        FindObjectOfType<DialogueRunner>().Clear();
     }
 }
