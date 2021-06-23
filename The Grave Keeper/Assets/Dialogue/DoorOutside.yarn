@@ -2,7 +2,11 @@
 tags:
 ---
     After a long day of work you come back home
+    <<if visited("Wife.GetBread")>>
     <<call scene(4)>>
+    <<else>>
+    <<call scene(6)>>
+    <<endif>>
 ===
 
 
