@@ -15,7 +15,7 @@ tags:
 title: Direction.Church
 tags:
 ---
-	<<if visited("Man.WalkAway")>>
+	<<if visited("Man.Force")>>
 	You pick up your money
 	<<endif>>
 	You go back, the other direction, to the church
