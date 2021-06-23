@@ -17,7 +17,7 @@ public class EndAnimation : AnimationComponent
     public override void Animate()
     {
         StartCoroutine("Lights");
-        Destroy(transform.GetChild(1));
+        Destroy(transform.GetChild(1).gameObject);
         Destroy(GetComponent<Animator>());
     }
 
