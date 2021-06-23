@@ -14,7 +14,7 @@ tags:
     Death does not stop because you’re grieving so you have to keep working.
 <<endif>>
 
-<<if visited("River.Boy") or visited("River.Women")>>
+<<if visited("River.Boy") or visited("River.Woman")>>
     The body you dumbed into river causes an outbreak into the village next over.
     Your ignorance keeps going, but your actions caused a village to be wiped out.
 <<endif>>
@@ -22,7 +22,7 @@ tags:
 <<if visited("Man.Force")>>
     Due to your demand of the money, 
     the man, in grief, died of famine.
-<<elsif visited("Man.WalkAway")>>
+<<elseif visited("Man.WalkAway")>>
     You let the man keep his money and he gets to eat more days.
     But he soon ended his own life, due to grief.
 <<endif>>

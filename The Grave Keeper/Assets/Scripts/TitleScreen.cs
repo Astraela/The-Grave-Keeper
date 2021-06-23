@@ -39,6 +39,9 @@ public class TitleScreen : MonoBehaviour
     }
 
     public void Play(){
+        if(FindObjectOfType<DialogueHelper>()){
+            FindObjectOfType<DialogueHelper>().Reset();
+        }
         StartCoroutine(OnPlay());
     }
 }
