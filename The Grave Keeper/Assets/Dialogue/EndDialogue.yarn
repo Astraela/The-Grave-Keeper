@@ -15,8 +15,8 @@ tags:
 <<endif>>
 
 <<if visited("River.Boy") or visited("River.Woman")>>
-    The body you dumbed into river causes an outbreak into the village next over.
-    Your ignorance keeps going, but your actions caused a village to be wiped out.
+    The body you dumped into river causes an outbreak into the village next over.
+    You keep being ignorant, and your actions caused a village to be wiped out.
 <<endif>>
 
 <<if visited("Man.Force")>>
