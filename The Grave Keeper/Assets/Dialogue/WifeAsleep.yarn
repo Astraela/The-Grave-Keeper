@@ -1,0 +1,11 @@
+﻿title: WifeDead
+tags:
+---
+    <<call uninteractable("WifeDead")>>
+    <<if not visited("WifeAsleep")>>
+    You find your wife
+    Sitting in a chair
+    Asleep..
+    <<call animate("WifeAsleep")>>
+    <<endif>>
+===
