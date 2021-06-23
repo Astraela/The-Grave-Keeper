@@ -8,7 +8,7 @@ tags:
     You pick up the boy
     <<call hide("BoyDead")>>
     <<call show("Grave")>>
-    <<call target("29.25, -4, 0")>>
+    <<call target("65.5, -4, 0")>>
     <<call show("BoyBody")>>
     <<endif>>
 ===

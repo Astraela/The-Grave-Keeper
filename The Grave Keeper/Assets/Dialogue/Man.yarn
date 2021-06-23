@@ -35,10 +35,11 @@ tags:
     <<if visited("Boy.Ignore")>>
     <<call hide("Boy")>>
     <<call show("BoyDead")>>
+    <<call target("-9.15, -3.6, 0")>>
     <<elseif visited("Boy.Help")>>
+    <<call target("65.5, -4, 0")>>
     <<call show("Grave")>>
     <<endif>>
-    <<call target("-9.15, -3.6, 0")>>
     <<call show("Direction.Church")>>
 ===
 
@@ -52,9 +53,10 @@ tags:
     <<if visited("Boy.Ignore")>>
     <<call hide("Boy")>>
     <<call show("BoyDead")>>
+    <<call target("-9.15, -3.6, 0")>>
     <<elseif visited("Boy.Help")>>
+    <<call target("65.5, -4, 0")>>
     <<call show("Grave")>>
     <<endif>>
-    <<call target("-9.15, -3.6, 0")>>
     <<call show("Direction.Church")>>
 ===
