@@ -1,18 +1,18 @@
 ﻿title: Man
 tags:
 ---
-    You ring the bell and loudly say...
-    Gravekeeper: BRING OUT THE DEAD!!
+    You ring the bell and yell...
+    Gravekeeper: BRING OUT THE DEAD!
     <<call animate("DeadBody")>>
     <<call focus("-22,-3,-50")>>
-    Something from high up falls down into your cart
-    Its a young pregnant lady
-    Dead and covered with swollen lumbs
-    A man high up at the window screams at you
-    Man: This is your fault you devils peasant!
+    Something from high up falls down into your chariot
+    It's a young pregnant lady
+    Dead and covered with swollen sores
+    A man high up, at the window, screams at you
+    Man: This is your fault, you devilish peasant!
     Man: You did this to her!
     Man: And my child!
-    Gravekeeper: Yet you still trust me
+    Gravekeeper: Yet still you trust me
     Man: ...
     [[Ask for payment|Man.AskForMoney]]
 ===
@@ -20,9 +20,9 @@ tags:
 title: Man.AskForMoney
 tags:
 ---
-    Gravekeeper: Are you gonna pay me or what
-    Gravekeeper: Im not just gonna do my work for free
-    Man: You think i have money, get outta here!
+    Gravekeeper: Are you gonna pay me or what?
+    Gravekeeper: I'm not just gonna do my work for free
+    Man: You think I have money, get outta here!
     [[Walk away|Man.WalkAway]]
     [[Force him more|Man.Force]]
 ===
@@ -46,7 +46,7 @@ tags:
 title: Man.Force
 tags:
 ---
-    Gravekeeper: Give me money or else i will throw her infront of your doorstep
+    Gravekeeper: Give me money or I will throw her infront of your doorstep.
     Man: Alright Alright, here!
     He throws the money at you
     <<call hide("Man")>>

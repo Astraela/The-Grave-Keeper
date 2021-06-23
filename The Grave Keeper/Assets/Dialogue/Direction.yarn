@@ -18,6 +18,6 @@ tags:
 	<<if visited("Man.Force")>>
 	You pick up your money
 	<<endif>>
-	You go back, the other direction, to the church
+	You turn back and go to the church
 	<<call hide("Direction.Church")>>
 ===

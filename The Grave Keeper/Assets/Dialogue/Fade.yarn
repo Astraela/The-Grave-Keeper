@@ -3,15 +3,15 @@ tags:
 ---
     <<call uninteractable("Fade")>>
     You're a gravepeeker in 1350, the age of the black death(bubonic plague)
-    At this time more than 40% of the european population died because of it
+    At this time more than 40% of the european population died because of the plague
     As grave gravekeeper, or the so called "body collector" you walk around your town looking for bodies
     This was one of the most dangerous jobs at that time
-    You are the one digging the massgraves and burying the dead
-    And sometimes, when there was no place in the massgraves, the dead got dumped in other places too
+    You are the one digging the mass graves and burying the dead
+    And sometimes, when there was no place in the mass graves, the dead got dumped in other places too
     People realy hated your kind
-    Not because you got rid of the dead
-    But because you got rich by doing this job and they believed you were the one that spreaded the plague more into town
-    And most gravediggers where pretty arogant and evil
+    Not because you got rid of the dead...
+    ...But because you got rich by doing this job and they believed you were the one spreading the plague
+    And most gravediggers were pretty arrogant and maleficent
     But are you?
     Are you ready?
     [[Yes|Fade.Yes]]
@@ -21,6 +21,6 @@ tags:
 title: Fade.Yes
 tags:
 ---
-    (Move around with the WASD keys)
+    (Move around with the A and D keys)
     <<call animate("OpeningFade")>>
 ===

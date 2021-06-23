@@ -4,7 +4,7 @@ tags:
     <<if not visited("BoyDead")>>
     Gravekeeper: *Sigh*
     Gravekeeper: That poor boy
-    Gravekeeper: He died in such a short amount of time
+    Gravekeeper: He passed so soon
     You pick up the boy
     <<call hide("BoyDead")>>
     <<call show("Grave")>>

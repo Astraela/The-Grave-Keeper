@@ -4,7 +4,7 @@ tags:
     <<if not visited("Boy")>>
         Boy: Please, sir..
         Boy: Can you help me?
-        Boy: Do you have some food or money maybe?
+        Boy: Do you have some food or money to spare?
         [[Ignore him|Boy.Ignore]]
         <<if visited("Wife.GetBread")>>
             [[Give him your bread|Boy.Help]]
@@ -15,7 +15,7 @@ tags:
 title: Boy.Help
 tags:
 ---
-    Gravekeeper: Here boy, i have some bread on me.
+    Gravekeeper: Here boy, I have some bread on me.
     Boy: Thank you sir
     Gravekeeper: Take care
     <<call show("Man")>>
@@ -26,7 +26,7 @@ tags:
 title: Boy.Ignore
 tags:
 ---
-    You walk away
+    The boy looks down
     <<call show("Man")>>
     <<call target("-28, -4, 0")>>
     <<call show("Direction.Bell")>>

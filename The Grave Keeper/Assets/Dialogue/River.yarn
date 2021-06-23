@@ -12,8 +12,8 @@ tags:
 title: River.Boy
 tags:
 ---
-    Gravekeeper: He didnt deserve this
-    Gravekeeper: He was still so young
+    Gravekeeper: He didn't deserve this
+    Gravekeeper: He was so young
     Gravekeeper: And all alone
     Gravekeeper: For nature to feed upon
     <<call show("DoorOutside")>>
