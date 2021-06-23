@@ -13,7 +13,6 @@ tags:
     <<endif>>
     Gravekeeper: ...
     You fall to your knees and cry
-    (Animation stil WIP)
     <<call animate("WifeDead")>>
     <<endif>>
 ===
