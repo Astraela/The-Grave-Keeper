@@ -19,9 +19,9 @@ public class EndAnimationAsleep : AnimationComponent
             Color color = fade.color;
             color.a += 1/255f;
             fade.color = color;
-            //if(color.a >= 1){
-                //SceneManager.LoadScene(5);
-            //}
+            if(color.a >= 1){
+                SceneManager.LoadScene(5);
+            }
         }
     }
 }
